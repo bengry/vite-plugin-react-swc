@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
 
 // Ensure HMR of styled component alongside other components
 export const StyledCode = styled.code`
   color: palevioletred;
 `;
 
-export const Counter = ({ primary }: { primary?: boolean }) => {
+export const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -14,15 +14,9 @@ export const Counter = ({ primary }: { primary?: boolean }) => {
       css={`
         border-radius: 3px;
         padding: 0.5rem 1rem;
-        color: white;
+        color: pink;
         background: transparent;
-        border: 2px solid white;
-        ${() =>
-          primary &&
-          css`
-            background: white;
-            color: black;
-          `}
+        border: 2px solid black;
       `}
       onClick={() => setCount(count + 1)}
     >
